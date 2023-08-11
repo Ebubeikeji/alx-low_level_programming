@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
 /**
@@ -9,23 +10,22 @@
 int main(void)
 {
 	int n;
-	time_t current_time;
-	struct tm *time_info;
 
-	time(&current_time);
-	time_info = localtime(&current_time);
+	srand(time(0));
 
-	n = time_info->tm_sec % 10;
-
-	printf("The number: %d\n", n);
+	n = rand() % 21 - 10;
 
 	if (n > 0)
 	{
-		printf("is positive\n");
+		printf("%d is positive\n", n);
 	}
-	else
+	if (n < 0)
 	{
-		printf("is negative\n");
+		printf("%d is negative\n", n);
+	}
+	if (n == 0)
+	{
+		printf("%d is zero\n", n);
 	}
 
 	return (0);
