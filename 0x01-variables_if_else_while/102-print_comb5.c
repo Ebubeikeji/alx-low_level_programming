@@ -7,22 +7,22 @@
  */
 int main(void)
 {
-	int first_number;
-	int second_number;
+	int num1;
+	int num2;
 
-	for (first_number = 0; first_number <= 99; first_number++)
+	for (num1 = 0; num1 <= 98; num1++)
 	{
-		for (second_number = 0; second_number <= 99; second_number++)
+		for (num2 = num1 + 1; num2 <= 99; num2++)
 		{
-			if (first_number <= second_number)
+			if (num1 < num2)
 			{
-				putchar('0' + first_number / 10);
-				putchar('0' + first_number % 10);
+				putchar('0' + num1 / 10);
+				putchar('0' + num1 % 10);
 				putchar(' ');
-				putchar('0' + second_number / 10);
-				putchar('0' + second_number % 10);
+				putchar('0' + num2 / 10);
+				putchar('0' + num2 % 10);
 
-				if (first_number < 99 || second_number < 99)
+				if (num1 < 98 || num2 < 99)
 				{
 					putchar(',');
 					putchar(' ');
