@@ -13,19 +13,21 @@ int main(void)
 
 	srand(time(0));
 
-	n = rand() % 21 - 10;
+	n = rand() - RAND_MAX / 2;
+
+	printf("%d is ", n);
 
 	if (n > 0)
 	{
-		printf("%d is positive\n", n);
+		printf("positive\n");
 	}
 	if (n < 0)
 	{
-		printf("%d is negative\n", n);
+		printf("negative\n");
 	}
 	if (n == 0)
 	{
-		printf("%d is zero\n", n);
+		printf("zero\n");
 	}
 
 	return (0);
