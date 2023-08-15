@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * print_alphabet - Entry point
  *
  * Description: Prints the alphabet, in lowercase, followed by a new line.
  *
  * Return: Alwas 0 (Success)
  */
 
-int main(void)
+void print_alphabet(void)
 {
 	char letter = 'a';
 
@@ -19,6 +19,4 @@ int main(void)
 	}
 
 	_putchar('\n');
-
-	return (0);
 }
